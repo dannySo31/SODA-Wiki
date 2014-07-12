@@ -1,0 +1,22 @@
+﻿
+@model IEnumerable<Sterling.IS.Utilities.ServiceAgent.Entities.Section>
+
+
+
+@foreach (var s in Model)
+{
+    <div class='sectionContainer'>
+        <span class='sectionHeader'>@s.Name</span>
+        
+        <a class="edit_icon editSection_icon" data-action=@Url.Action("_Edit","Section",new {id=s.Id}) title="edit"><img  src=@Url.Content("~/Images/edit.png") alt= 'edit' height=15 width=15 /></a>
+                                 <a class="delete_icon deleteSection_icon" title="delete" data-id=@s.Id><img  src=@Url.Content("~/Images/delete.png") alt= 'delete' height=15 width=15 /></a>
+                               
+        <div class='sectionBody'>
+            @Html.Raw(@s.Content)
+        </div>
+    </div>
+   
+}
+
+
+

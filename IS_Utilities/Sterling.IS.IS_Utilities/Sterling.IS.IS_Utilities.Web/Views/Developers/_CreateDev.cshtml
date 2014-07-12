@@ -1,0 +1,29 @@
+﻿@using Sterling.IS.Utilities.Web.ViewModels
+@model Sterling.IS.Utilities.Web.ViewModels._OwnerFormViewModel
+
+ @using (Html.BeginForm("_Create", "Developers", FormMethod.Post,
+                    new { id = "_createDevForm", enctype = "multipart/form-data" }))
+ {
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+    @Html.Action("_DevForm", new { viewModel = Model })              
+<div style="text-align:right">
+    <img class="img_loading" src="../../Images/loading-blue.gif" alt="loading" height=30 width=30 />
+    <button class='spanButton loadButton'  id='dev_create' type="submit">Create</button>
+</div>
+ }
+     
+
+<script type="text/javascript">
+    $(function () {
+        $.validator.unobtrusive.parse();
+        $('#dev_create').click(function () {
+            $(this).hide();
+            $('.img_loading').show();
+        });
+
+    });
+ </script>
+                    
+              

@@ -1,0 +1,17 @@
+﻿@model Sterling.IS.Utilities.Web.ViewModels.HomeViewModel
+
+@{
+    ViewBag.Title = "IS Applications";
+}
+
+<h2>Sterling IS Applications</h2>
+<br />
+<hr />
+<div id='home-accordion'>
+  
+    <div >
+        @Html.Action("_GetApps", "App", new { apps=Model.Applications })
+    </div>
+    
+</div>
+

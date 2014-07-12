@@ -1,0 +1,13 @@
+D:\Visual Studio 2010\IS_Utilities\Sterling.IS.IS_Utilities\Sterling.IS.IS_Utilities.ServiceAgent\bin\Debug\Sterling.IS.IS_Utilities.ServiceAgent.dll.config
+D:\Visual Studio 2010\IS_Utilities\Sterling.IS.IS_Utilities\Sterling.IS.IS_Utilities.ServiceAgent\bin\Debug\Sterling.IS.IS_Utilities.ServiceAgent.dll
+D:\Visual Studio 2010\IS_Utilities\Sterling.IS.IS_Utilities\Sterling.IS.IS_Utilities.ServiceAgent\bin\Debug\Sterling.IS.IS_Utilities.ServiceAgent.pdb
+D:\Visual Studio 2010\IS_Utilities\Sterling.IS.IS_Utilities\Sterling.IS.IS_Utilities.ServiceAgent\bin\Debug\EntityFramework.dll
+D:\Visual Studio 2010\IS_Utilities\Sterling.IS.IS_Utilities\Sterling.IS.IS_Utilities.ServiceAgent\bin\Debug\EntityFramework.SqlServer.dll
+D:\Visual Studio 2010\IS_Utilities\Sterling.IS.IS_Utilities\Sterling.IS.IS_Utilities.ServiceAgent\bin\Debug\EntityFramework.SqlServerCompact.dll
+D:\Visual Studio 2010\IS_Utilities\Sterling.IS.IS_Utilities\Sterling.IS.IS_Utilities.ServiceAgent\bin\Debug\System.Data.SqlServerCe.dll
+D:\Visual Studio 2010\IS_Utilities\Sterling.IS.IS_Utilities\Sterling.IS.IS_Utilities.ServiceAgent\bin\Debug\EntityFramework.xml
+D:\Visual Studio 2010\IS_Utilities\Sterling.IS.IS_Utilities\Sterling.IS.IS_Utilities.ServiceAgent\bin\Debug\EntityFramework.SqlServer.xml
+D:\Visual Studio 2010\IS_Utilities\Sterling.IS.IS_Utilities\Sterling.IS.IS_Utilities.ServiceAgent\bin\Debug\EntityFramework.SqlServerCompact.xml
+D:\Visual Studio 2010\IS_Utilities\Sterling.IS.IS_Utilities\Sterling.IS.IS_Utilities.ServiceAgent\obj\Debug\Sterling.IS.IS_Utilities.ServiceAgent.dll
+D:\Visual Studio 2010\IS_Utilities\Sterling.IS.IS_Utilities\Sterling.IS.IS_Utilities.ServiceAgent\obj\Debug\Sterling.IS.IS_Utilities.ServiceAgent.pdb
+D:\Visual Studio 2010\IS_Utilities\Sterling.IS.IS_Utilities\Sterling.IS.IS_Utilities.ServiceAgent\obj\Debug\Sterling.IS.IS_Utilities.ServiceAgent.csprojResolveAssemblyReference.cache

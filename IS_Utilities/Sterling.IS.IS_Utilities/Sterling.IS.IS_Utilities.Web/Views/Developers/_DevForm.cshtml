@@ -1,0 +1,102 @@
+﻿@model Sterling.IS.Utilities.Web.ViewModels._OwnerFormViewModel
+
+    <div>
+        <div style="float:left; width:150px">
+            <table>
+                <tr>
+                    <td style="vertical-align:top">
+                    <div class="imgDev">
+                    <img id='previewHolder' src= @Url.Content(Model.Developer.Pic) alt="image" />
+                   </div>
+                   
+                </td>
+                </tr>
+                <tr>
+                    <td style="font-size:9px">
+                    Recommended size:120 x 120
+                    </td>
+                </tr>
+            </table>
+        </div>
+         <div style="float:left;width:60%;padding-left:30px;padding-right:30px;border-left-style:solid; border-left-width:1px; border-left-color:#D1D1D1">
+              <div>
+             
+                    @Html.HiddenFor(m => m.Developer.ID)
+                     @Html.HiddenFor(m => m.Developer.Pic)
+                    @Html.LabelFor(m => m.Developer.FirstName)
+                    @Html.EditorFor(m => m.Developer.FirstName)
+                    <br />
+                    @Html.ValidationMessageFor(m => m.Developer.FirstName)
+                    @Html.LabelFor(m => m.Developer.LastName)
+                    @Html.EditorFor(m => m.Developer.LastName)
+                    <br />
+                     @Html.ValidationMessageFor(m => m.Developer.LastName)
+                    @Html.LabelFor(m => m.Developer.Email)
+                    @Html.EditorFor(m => m.Developer.Email)
+                    @Html.ValidationMessageFor(m => m.Developer.Email)
+
+                    @Html.LabelFor(m=>m.Developer.Title)
+                    @Html.EditorFor(m => m.Developer.Title)
+                    <hr />
+                    Applications:
+                    <br />
+                    <div class="checkboxList">
+                    @Html.CheckBoxListFor(m=> m.PostedApps,
+                        m=>m.All_Applications,
+                        entity=>entity.ID,
+                        entity=>entity.Name,
+                        model=>model.Developer.Applications,
+                        Position.Vertical)
+                    </div>
+                    <hr />
+                   <label for="file">Upload Photo</label>
+                    <input type="file" name="file" id="myFile" accept="image/*"/>
+                   
+                    
+                  
+                    </div>
+                    
+                    
+        </div>
+         
+</div>
+
+
+<script type="text/javascript">
+    $(function () {
+        $.validator.addMethod('accept', function () { return true; });
+        $('#myFile').change(function () {
+            
+            if (this.files && this.files[0]) {
+                var reader = new FileReader();
+                reader.onload = function (e) {
+                    $('#previewHolder').attr('src', e.target.result);
+                }
+
+                reader.readAsDataURL(this.files[0]);
+            }
+
+        });
+        $('.imgDev').imagefit({
+            mode: 'inside',
+            force: 'true',
+            halign: 'center',
+            valign: 'top'
+        });
+        
+    });
+
+    
+</script>
+<style>
+    .checkboxList
+{
+    font-size:10px;
+}
+.checkboxList label
+{
+    padding-left:10px;
+    display:inline;
+}
+</style>
+

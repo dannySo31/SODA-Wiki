@@ -1,0 +1,51 @@
+﻿@model Sterling.IS.Utilities.Web.ViewModels.AppsViewModel
+@{
+    ViewBag.Title = "Apps";
+}
+
+<table>
+    <tbody>
+        <tr>
+            <td>
+                <img src=@Url.Content("~/Images/MS-DOS-Application-icon.png") alt="image" height=120 width=120 />
+            </td>
+            <td>
+                <table style="width:100%">
+                    <tr>
+                        <td>
+                            <h2>@Model.Application.Name</h2>
+                        </td>
+                         
+                    </tr>
+                </table>
+                
+                <div class='indent'>
+                    <div>
+                         @Model.Application.Description
+                    </div>
+
+                </div>
+            </td>
+           
+        </tr>
+    </tbody>
+</table>
+
+<hr />
+<div>
+
+
+@Html.Action("_Create","Section",new{appId=Model.Application.ID})
+
+<div id='appSections'>
+    @Html.Action("_GetSections","Section",new{sections =Model.Application.Sections})
+    <div id='sectionDeleteForm' class='dialog'>
+
+</div>
+</div>
+
+</div>
+
+@Scripts.Render("~/Scripts/section.js")
+@Styles.Render("~/Content/section.css")
+

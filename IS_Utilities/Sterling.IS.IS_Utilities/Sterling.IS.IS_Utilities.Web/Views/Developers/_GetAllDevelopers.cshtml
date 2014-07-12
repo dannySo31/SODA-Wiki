@@ -1,0 +1,58 @@
+﻿@model IEnumerable<Sterling.IS.Utilities.ServiceAgent.Entities.Owner>
+
+<div id='GetDevs'>
+<div class='toolbar'><span id='createDevBtn' class='spanButton'>Create New Developer</span></div>
+     @foreach(var m in Model)
+     {
+        <div class='dev-list' data-action ='@Url.Action("Profile","Developers",new{id=m.ID})'>
+             <table>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div class="imgDev">
+                                     <img  src=@Url.Content(m.Pic) alt="image" />
+                                </div>
+                               
+                            </td>
+                            <td>
+                                 <span style="font-weight:bold; font-size:1.5em">@Html.DisplayTextFor(modelItem => m.FullName)</span> &nbsp;&nbsp;<a class="edit_icon editDev_icon" data-id=@m.ID title="edit"><img  src=@Url.Content("~/Images/edit.png") alt= 'edit' height=15 width=15 /></a>
+                                 <a class="delete_icon deleteDev_icon" title="delete" data-id=@m.ID><img  src=@Url.Content("~/Images/delete.png") alt= 'delete' height=15 width=15 /></a>
+                                 <div class='indent'>
+                                    <div>
+                        Email:<a href="mailto:@m.Email" alt="Email">@m.Email</a>
+                    </div>
+                                    <div>
+                                         @Html.DisplayTextFor(modelItem=>m.Title)
+                                    </div>
+
+                                    <div>
+                                        Applications:
+                                        @foreach (var a in m.Applications)
+                                        {
+                                            @Html.ActionLink(linkText: a.Name,actionName:"Apps",controllerName:"App",routeValues:new{id= a.ID},htmlAttributes:null)
+                                        }
+                                        @if (m.Applications.Count == 0)
+                                        {
+                                            <span>-</span>
+                                        }
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+        </div>
+     }
+       <div id="devCreateForm" class='dialog' title="Create New Developer Profile">
+        
+       </div>
+       <div id="devEditForm" class='dialog' title="Edit Developer Profile">
+        
+       </div>
+       <div id="devDeleteForm" class='dialog' title="Delete Developer Profile">
+        
+       </div>
+</div>
+
+@Styles.Render("~/Content/developers.css")
+@Scripts.Render("~/Scripts/devs.js")

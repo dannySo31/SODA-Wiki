@@ -1,0 +1,52 @@
+﻿@model Sterling.IS.Utilities.ServiceAgent.Entities.Owner
+
+@{
+    ViewBag.Title = "Profile- " + Model.FullName;
+}
+
+<table>
+    <tbody>
+        <tr>
+            <td>
+                <div class='imgDev'>
+                <img src=@Url.Content(Model.Pic) alt="image"/>
+                </div>
+            </td>
+            <td style="vertical-align:top">
+                 <h2>@Model.FullName</h2>
+                <table style="width:100%">
+                    <tr>
+                        <td style="vertical-align:top">
+                           
+                        </td>
+                         
+                    </tr>
+                </table>
+                
+                <div class='indent'>
+                    <div>
+                        Email:<a href="mailto:@Model.Email" alt="Email">@Model.Email</a>
+                    </div>
+                    <div>
+                         @Model.Title
+                    </div>
+
+                </div>
+            </td>
+           
+        </tr>
+    </tbody>
+</table>
+
+<hr />
+
+<script type="text/javascript">
+    $(function () {
+        $('.imgDev').imagefit({
+            mode: 'inside',
+            force: 'true',
+            halign: 'center',
+            valign: 'top'
+        });
+    });
+</script>

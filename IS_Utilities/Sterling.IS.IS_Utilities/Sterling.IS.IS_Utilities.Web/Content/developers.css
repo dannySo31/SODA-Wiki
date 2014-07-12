@@ -1,0 +1,10 @@
+﻿
+.dev-list:hover
+{
+    background-color:#FFFFFF;
+    cursor:pointer;
+}
+#devCreateForm
+{
+    display:none;
+}

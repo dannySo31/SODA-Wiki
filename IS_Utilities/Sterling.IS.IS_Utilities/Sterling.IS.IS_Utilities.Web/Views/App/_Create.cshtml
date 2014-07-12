@@ -1,0 +1,24 @@
+﻿@model Sterling.IS.Utilities.ServiceAgent.Entities.Application
+
+@using (Ajax.BeginForm("_Submit", "App", new AjaxOptions() { UpdateTargetId = "GetApp", OnSuccess = "CloseDialogWindow" }, new { id = "_createAppForm" }))
+                {
+                    @Html.AntiForgeryToken()
+                    @Html.ValidationSummary(true)
+                     
+                    @Html.Action("_AppForm",new {App= Model});
+                   <div style="text-align:right">
+                    <img class="img_loading" src="../../Images/loading-blue.gif" alt="loading" height=30 width=30 />
+               <button class='spanButton' id='app_submit' type="submit">Create Application</button>
+               </div>
+  }
+
+  <script type="text/javascript">
+      $(function () {
+          $.validator.unobtrusive.parse("#_createAppForm");
+          $('#app_submit').click(function () {
+              $(this).hide();
+              $('.img_loading').show();
+          });
+
+      });
+ </script>

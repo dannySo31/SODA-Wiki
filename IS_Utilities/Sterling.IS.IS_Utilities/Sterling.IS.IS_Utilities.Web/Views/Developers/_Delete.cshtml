@@ -1,0 +1,28 @@
+﻿@model Sterling.IS.Utilities.ServiceAgent.Entities.Owner
+
+@using (Ajax.BeginForm("_DeleteConfirmed", "Developers", new AjaxOptions() { UpdateTargetId = "GetDevs", OnSuccess = "CloseDialog" }))
+{
+     @Html.AntiForgeryToken()
+     @Html.ValidationSummary(true)
+    <div>
+    @Html.HiddenFor(m => Model.ID)
+        <p>Are you sure you want to delete <strong>@Model.FullName</strong>?</p>
+        <div class='imgDev'>
+            <img src=@Url.Content(Model.Pic) alt="image" />
+        </div>
+    </div>
+    <div style="text-align:right">
+        <button id='delete_submit' class='spanButton' type="submit">Delete</button>
+    </div>
+}
+
+<script type="text/javascript">
+    $(function () {
+        $('.imgDev').imagefit({
+            mode: 'inside',
+            force: 'true',
+            halign: 'center',
+            valign: 'top'
+        });
+    });
+</script>

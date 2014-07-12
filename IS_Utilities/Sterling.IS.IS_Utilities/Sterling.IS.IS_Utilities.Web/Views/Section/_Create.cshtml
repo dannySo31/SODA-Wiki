@@ -1,0 +1,21 @@
+﻿@model Sterling.IS.Utilities.ServiceAgent.Entities.Section
+<div id='GetSections'>
+   <div class='toolbar'><span id='createSectionBtn' class='spanButton'>Create New Section</span></div>
+   <div id='sectionCreateForm'>
+ @using (Html.BeginForm("_CreateNewSection", "App", FormMethod.Post,
+                    new { id = "_createSectionForm" }))
+ {
+        @Html.AntiForgeryToken()
+        @Html.ValidationSummary(true)
+  
+        @Html.Action("_SectionForm", new { section = Model })
+    <div class="sectionFormBody">
+         <button class='spanButton' id='createSection' type="submit">Save</button>
+        
+     </div>
+    
+ }
+  </div>
+ 
+ </div>
+

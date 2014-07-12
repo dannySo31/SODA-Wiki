@@ -1,0 +1,46 @@
+﻿@model Sterling.IS.Utilities.ServiceAgent.Entities.Section
+
+<div id='GetSections1'>
+  
+   <div id='sectionEditForm'>
+ @using (Html.BeginForm("_UpdateSection", "App", FormMethod.Post,
+                    new { id = "_editSectionForm" }))
+ {
+        @Html.AntiForgeryToken()
+        @Html.ValidationSummary(true)
+        <table style="width:100%">
+            <tr>
+                <td>
+                    <h1 >Edit</h1>
+                </td>
+                <td style="text-align:right; padding-right:0em">
+                     
+        <img class="img_loading" src="../../Images/loading-blue.gif" alt="loading" height=30 width=30 />
+         <button class='spanButton' id='editSection' type="submit">Update</button>
+        <button class='spanButton' onclick='window.location.href=~/App/Apps/@Model.ApplicationId'>Back</button>
+     
+                </td>
+            </tr>
+        </table>
+     <hr />
+ 
+      @Html.Action("_SectionForm", new { section = Model })
+   
+    
+ }
+  </div>
+ 
+ </div>
+ @Scripts.Render("~/Scripts/section.js")
+@Styles.Render("~/Content/section.css")
+ <script type="text/javascript">
+     $(function () {
+        
+
+         $.validator.unobtrusive.parse("#_editSectionForm");
+         $('#editSection').click(function () {
+             $(this).hide();
+             $('.img_loading').show();
+         });
+     });
+ </script>

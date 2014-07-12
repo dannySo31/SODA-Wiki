@@ -1,0 +1,24 @@
+﻿@model Sterling.IS.Utilities.Web.ViewModels._OwnerFormViewModel
+
+ @using (Html.BeginForm("_Update", "Developers", FormMethod.Post,
+                    new { id = "_editDevForm", enctype = "multipart/form-data" }))
+ {
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+    @Html.Action("_DevForm", new { viewModel = Model })              
+<div style="text-align:right">
+    <img class="img_loading" src="../../Images/loading-blue.gif" alt="loading" height=30 width=30 />
+    <button class='spanButton'  id='dev_edit' type="submit">Update</button>
+</div>
+ }
+
+ <script type="text/javascript">
+     $(function () {
+         $.validator.unobtrusive.parse("#_editDevForm");
+         $('#dev_edit').click(function () {
+             $(this).hide();
+             $('.img_loading').show();
+         });
+     });
+ </script>

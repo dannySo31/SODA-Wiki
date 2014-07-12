@@ -1,0 +1,35 @@
+﻿@model Sterling.IS.Utilities.ServiceAgent.Entities.Section
+
+<div class="sectionFormBody">
+    <div>
+    @Html.HiddenFor(m=>m.Id)
+    @Html.HiddenFor(m=>m.ApplicationId)
+    <table>
+        <tr>
+            <td>
+                @Html.LabelFor(m=> m.Name)
+            </td>
+            <td>
+                 @Html.EditorFor(m=>m.Name)
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+                 @Html.LabelFor(m => m.Content)
+            </td>
+            <td>
+                 @Html.EditorFor(m => m.Content)
+            </td>
+        </tr>
+    </table>
+    
+   
+    </div>
+   
+   
+</div>
+
+
+
+

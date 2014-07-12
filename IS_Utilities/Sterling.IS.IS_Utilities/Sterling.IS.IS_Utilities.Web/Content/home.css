@@ -1,0 +1,36 @@
+﻿body {
+}
+.home-appList
+{
+    padding:1em .3em 1em .3em;
+}
+.home-appList:hover
+{
+    background-color:#FFFFFF;
+    cursor:pointer;
+    
+}
+.dialog textarea
+{
+    height:100px;
+}
+.dialog textarea, .dialog input[type=text]
+{
+    width:80%;
+}
+#AppForm, #editForm
+{
+    display:none;
+}
+
+#home-accordion h3
+{ 
+    
+    
+}
+.indent
+{
+    margin-left:1.5em;
+    margin-right:1.5em;
+    font-size:12px;
+}

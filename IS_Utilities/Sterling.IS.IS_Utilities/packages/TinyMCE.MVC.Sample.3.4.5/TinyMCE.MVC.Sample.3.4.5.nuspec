@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>TinyMCE.MVC.Sample</id>
+    <version>3.4.5</version>
+    <title>TinyMCE.MVC.Sample</title>
+    <authors>Tugberk Ugurlu</authors>
+    <owners>Tugberk Ugurlu</owners>
+    <projectUrl>http://www.tugberkugurlu.com/</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>MVC Sample Controller, Model and View For TinyMCE HTML Text Editor</description>
+    <summary>MVC Sample Controller, Model and View For TinyMCE HTML Text Editor</summary>
+    <releaseNotes />
+    <copyright />
+    <language />
+    <tags>HTMLEditor TinyMCE Tugberk</tags>
+    <dependencies>
+      <dependency id="TinyMCE.MVC" version="3.4.5" />
+    </dependencies>
+  </metadata>
+</package>

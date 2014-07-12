@@ -1,0 +1,57 @@
+﻿@using Sterling.IS.Utilities.ServiceAgent.Entities
+@model IEnumerable<Sterling.IS.Utilities.ServiceAgent.Entities.Application>
+<div id='GetApp'>
+  <div id='app-create-new' class='toolbar'><span class='spanButton'>Create New Application</span></div>
+@foreach (var m in Model)
+            {
+             <div class="home-appList" data-action ='@Url.Action("Apps","App",new{id=m.ID})'>
+               
+                <table>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <img src=@Url.Content("~/Images/MS-DOS-Application-icon.png") alt="image" height=120 width=120 />
+                            </td>
+                            <td style="vertical-align:top">
+                                 <span style="font-weight:bold; font-size:1.5em">@Html.DisplayTextFor(modelItem => m.Name)</span>
+                                 &nbsp;&nbsp;<a class="edit_icon editApp_icon" data-id=@m.ID title="edit"><img  src=@Url.Content("~/Images/edit.png") alt= 'edit' height=15 width=15 /></a>
+                                 <a class="delete_icon deleteApp_icon" title="delete" data-id=@m.ID><img  src=@Url.Content("~/Images/delete.png") alt= 'delete' height=15 width=15 /></a>
+                                 <div class='indent'>
+               
+                                    <div>
+                                        <span style="font-weight:bold">Description:</span> @Html.DisplayTextFor(modelItem=>m.Description)
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+               
+
+             </div>
+            
+            }
+           
+            <div id="AppForm" class='dialog' title="Create New application">
+               @* @using (Ajax.BeginForm("_Submit", "App", new AjaxOptions() { UpdateTargetId = "GetApp", OnSuccess="CloseDialogWindow" }))
+                {
+                    @Html.AntiForgeryToken()
+                    @Html.ValidationSummary(true)
+                     
+                    @Html.Action("_AppForm",new {App= new Application()});
+                   <div style="text-align:right">
+                    <img class="img_loading" src="../../Images/loading-blue.gif" alt="loading" height=30 width=30 />
+               <button class='spanButton' id='app_submit' type="submit">Create Application</button>
+               </div>
+                }*@
+            </div>
+            <div id="editForm" class='dialog' title="Edit">
+               
+            </div>
+            <div id="deleteForm" class='dialog' title="Delete">
+               
+            </div>
+          
+</div>
+@Styles.Render("~/Content/home.css")
+@Scripts.Render("~/Scripts/home.js")

@@ -1,0 +1,10 @@
+﻿@model Sterling.IS.Utilities.Web.ViewModels.DevelopersViewModel
+
+@{
+    ViewBag.Title = "IS Applications- Developers";
+}
+
+<h2>Developers</h2>
+<br />
+<hr />
+@Html.Action("_GetAllDevelopers", "Developers", new { devs = Model.Developers })

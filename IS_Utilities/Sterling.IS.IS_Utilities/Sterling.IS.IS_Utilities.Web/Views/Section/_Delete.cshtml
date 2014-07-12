@@ -1,0 +1,17 @@
+﻿@model Sterling.IS.Utilities.ServiceAgent.Entities.Section
+
+@using (Ajax.BeginForm("_DeleteConfirmed", "Section", new AjaxOptions() { UpdateTargetId = "appSections", OnSuccess = "CloseDialog" }))
+{
+     @Html.AntiForgeryToken()
+     @Html.ValidationSummary(true)
+    <div>
+    @Html.HiddenFor(m => Model.Id)
+    @Html.HiddenFor(m => Model.ApplicationId)
+    @Html.HiddenFor(m => Model.Content)
+    @Html.HiddenFor(m => Model.Name)
+        <p>Are you sure you want to delete this Section?</p>
+    </div>
+    <div style="text-align:right">
+        <button id='delete_submit' class='spanButton' type="submit">Delete</button>
+    </div>
+}

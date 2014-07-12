@@ -1,0 +1,15 @@
+﻿@model Sterling.IS.Utilities.ServiceAgent.Entities.Application
+
+@using (Ajax.BeginForm("_DeleteConfirmed", "App", new AjaxOptions() { UpdateTargetId = "GetApp", OnSuccess="CloseDialog" }))
+{
+     @Html.AntiForgeryToken()
+     @Html.ValidationSummary(true)
+    <div>
+    @Html.HiddenFor(m => Model.ID)
+        <p>Are you sure you want to delete the Application <strong>@Model.Name</strong>?</p>
+    </div>
+    <div style="text-align:right">
+        <button id='delete_submit' class='spanButton' type="submit">Delete</button>
+    </div>
+}
+

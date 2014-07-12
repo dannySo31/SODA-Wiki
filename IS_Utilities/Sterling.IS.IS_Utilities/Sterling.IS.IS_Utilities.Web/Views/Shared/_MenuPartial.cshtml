@@ -1,0 +1,7 @@
+﻿@model IEnumerable<Sterling.IS.Utilities.ServiceAgent.Entities.MenuItem>
+
+<ul>
+@foreach(var m in Model){
+    <li><a href=@m.Path>@m.Name</a></li>
+   }
+</ul>

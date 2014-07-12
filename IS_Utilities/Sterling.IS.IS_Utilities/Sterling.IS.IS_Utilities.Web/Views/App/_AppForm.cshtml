@@ -1,0 +1,15 @@
+﻿@model Sterling.IS.Utilities.ServiceAgent.Entities.Application
+ 
+<div>
+    @Html.HiddenFor(m=>Model.ID)
+    @Html.LabelFor(m=> Model.Name)
+    @Html.EditorFor(m=>Model.Name)
+    <br />
+    @Html.ValidationMessageFor(m=> Model.Name)
+    @Html.LabelFor(m=>Model.Description)
+    @Html.EditorFor(m => Model.Description)
+    <br />
+    @Html.ValidationMessageFor(m=> Model.Description)
+   
+</div>
+
